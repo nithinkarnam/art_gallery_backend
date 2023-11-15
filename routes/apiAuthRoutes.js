@@ -1,3 +1,4 @@
+//apiAuthRoutes.js
 const router = require("express").Router();
 const multer = require("multer");
 const path = require("path");
@@ -20,7 +21,6 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage: storage });
-
 router.post("/uploadpost", upload.single("postimage"), uploadPost);
 router.post("/getpost", getPost);
 router.get("/getallpost", getAllPost);
@@ -29,5 +29,4 @@ router.post("/like", userLikePost);
 router.post("/dislike", userDislikePost);
 router.post("/deletepost", deletePost);
 router.post("/deleteuser", deleteUser);
-
 module.exports = router;

@@ -1,3 +1,4 @@
+//auth.js
 const router = require("express").Router();
 const multer = require("multer");
 const {
@@ -14,9 +15,8 @@ const storage = multer.diskStorage({
     cb(null, uniqueSuffix + "-" + file.originalname);
   },
 });
-const upload = multer({ storage: storage, limits: { fileSize: 6000000 } });
+const upload = multer({ storage: storage, limits: { fileSize: 5000000 } });
 router.post("/register", upload.single("image"), Register);
 router.post("/login", Login);
 router.post("/userdata", getUser);
-
 module.exports = router;

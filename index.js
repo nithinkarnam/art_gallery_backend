@@ -1,3 +1,4 @@
+//index.js
 const expr = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -20,7 +21,7 @@ app.use("/images/avtar", expr.static(path.join(__dirname, "/images/avtar")));
 app.use("/images/post", expr.static(path.join(__dirname, "/images/post")));
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/artgallery")
+  .connect("mongodb+srv://karnamnithin:1234@cluster0.qh6sy97.mongodb.net/artgallery")
   .then((res) => {
     console.log("Connected to DB");
   })

@@ -1,4 +1,4 @@
-const Post = require("../models/postModel");
+const Post = require("../models/postmodel");
 const User = require("../models/userModel");
 
 const uploadPost = async (req, res) => {
