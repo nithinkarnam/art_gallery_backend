@@ -1,5 +1,5 @@
-const Post = require("../models/postmodel");
-const User = require("../models/userModel");
+const Post = require("../models/Postmodel");
+const User = require("../models/UserModel");
 
 const uploadPost = async (req, res) => {
   try {
