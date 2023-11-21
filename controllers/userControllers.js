@@ -50,7 +50,7 @@ const Login = async (req, res) => {
             },
             process.env.JWT_SECRET,
             {
-              expiresIn: "1h",
+              expiresIn: null,
             }
           );
           return res.json({ token: token, message: "Login successfull" });
